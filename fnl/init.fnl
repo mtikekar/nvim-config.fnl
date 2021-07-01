@@ -66,6 +66,8 @@
             }})
 
 
+; translate (map mode lhs rhs opt1 opt2) to
+; (nvim.set_keymap mode lhs rhs {opt1 true opt2 true})
 (defn- map [mode lhs rhs ...]
   (let [opts {}]
     (for [i 1 (select :# ...)]
